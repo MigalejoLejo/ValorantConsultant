@@ -10,6 +10,8 @@ import SwiftUI
 struct Agent: Hashable, Codable {
     let status: Int
     
+    // Need to figure this out
+    
     
     
 
