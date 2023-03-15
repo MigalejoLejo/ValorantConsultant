@@ -15,6 +15,9 @@
 		4901BB3429C1231600A2C825 /* ValorantConsultantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB3329C1231600A2C825 /* ValorantConsultantUITests.swift */; };
 		4901BB3629C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB3529C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift */; };
 		4901BB4329C1232E00A2C825 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB4229C1232E00A2C825 /* Data.swift */; };
+		4977E1AD29C262C800A12C01 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1AC29C262C800A12C01 /* ViewModel.swift */; };
+		4977E1B529C27A6100A12C01 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4977E1B429C27A6100A12C01 /* default.png */; };
+		4977E1B729C2804100A12C01 /* UIImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1B629C2804100A12C01 /* UIImageURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		4901BB3329C1231600A2C825 /* ValorantConsultantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantConsultantUITests.swift; sourceTree = "<group>"; };
 		4901BB3529C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantConsultantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4901BB4229C1232E00A2C825 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../../../Data.swift; sourceTree = "<group>"; };
+		4977E1AC29C262C800A12C01 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4977E1B429C27A6100A12C01 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		4977E1B629C2804100A12C01 /* UIImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +104,12 @@
 			children = (
 				4901BB1829C1231400A2C825 /* ValorantConsultantApp.swift */,
 				4901BB1A29C1231400A2C825 /* ContentView.swift */,
+				4977E1AC29C262C800A12C01 /* ViewModel.swift */,
 				4901BB4229C1232E00A2C825 /* Data.swift */,
 				4901BB1C29C1231600A2C825 /* Assets.xcassets */,
+				4977E1B429C27A6100A12C01 /* default.png */,
 				4901BB1E29C1231600A2C825 /* Preview Content */,
+				4977E1B629C2804100A12C01 /* UIImageURL.swift */,
 			);
 			path = ValorantConsultant;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4977E1B529C27A6100A12C01 /* default.png in Resources */,
 				4901BB2029C1231600A2C825 /* Preview Assets.xcassets in Resources */,
 				4901BB1D29C1231600A2C825 /* Assets.xcassets in Resources */,
 			);
@@ -262,6 +272,8 @@
 			files = (
 				4901BB1B29C1231400A2C825 /* ContentView.swift in Sources */,
 				4901BB4329C1232E00A2C825 /* Data.swift in Sources */,
+				4977E1B729C2804100A12C01 /* UIImageURL.swift in Sources */,
+				4977E1AD29C262C800A12C01 /* ViewModel.swift in Sources */,
 				4901BB1929C1231400A2C825 /* ValorantConsultantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
