@@ -60,6 +60,11 @@ struct ContentView: View {
                     VStack{
                         Text(object.displayName)
                             .bold()
+                        Text(object.uuid)
+                            .monospacedDigit()
+                            .underline()
+                            .font(.custom("ID", size: 15))
+
                         Text(object.description)
                     }
                 }
