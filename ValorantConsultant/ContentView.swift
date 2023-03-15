@@ -7,21 +7,24 @@
 
 import SwiftUI
 
-struct Agent: Hashable, Codable {
+
+struct Object: Codable, Hashable{
+    let uuid:String
+    let displayName:String
+    let description:String
+}
+struct Agent: Codable, Hashable{
     let status: Int
+    let data:[Object]
     
     // Need to figure this out
-    
-    
-    
-
 }
 
 
 
 
 class ViewModel: ObservableObject{
-    @Published var agents: Agent = Agent(status:0)
+    @Published var agents: Agent = Agent(status:1, data: [Object(uuid:"",displayName: "",description: "")])
 
     func getAgents(){
         
@@ -72,6 +75,7 @@ struct ContentView: View {
                 HStack{
                     Text("Hey: "+String(viewModel.agents.status))
                         .bold()
+                    Text("Agent: "+String(viewModel.agents.data[0].displayName))
                 }
                 
             }
