@@ -56,10 +56,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
-                HStack{
-                    Text("Hey: "+String(viewModel.agents.status))
-                        .bold()
+                ForEach (viewModel.agents.data, id:\.self) { object in
+                    VStack{
+                        Text(object.displayName)
+                            .bold()
+                        Text(object.description)
+                    }
                 }
+               
             }
             .navigationTitle("Agents")
             .onAppear{
