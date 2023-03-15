@@ -7,35 +7,32 @@
 
 import SwiftUI
 
-struct Agent: Hashable, Codable {
-    let status: Int
-    
-    
-    
 
+// Data Models to store requested information.
+struct Object: Codable, Hashable{
+    let uuid:String
+    let displayName:String
+    let description:String
+}
+struct Agent: Codable, Hashable{
+    let status: Int
+    let data:[Object]
 }
 
 
 
-
+// ViewModel-Class with Function that request information from the API
 class ViewModel: ObservableObject{
-    @Published var agents: Agent = Agent(status:0)
+    @Published var agents: Agent = Agent(status:1, data: [Object(uuid:"",displayName: "",description: "")])
 
+    
     func getAgents(){
-        
-        guard let url = URL(string: "https://valorant-api.com/v1/agents") else {
-            return
-        }
+        guard let url = URL(string: "https://valorant-api.com/v1/agents") else {return}
         
         let task = URLSession.shared.dataTask(with: url) { [weak self]
             data, _, error in
-            guard let data = data, error == nil else {
-                return
-            }
-       
-        
-       
-        
+            guard let data = data, error == nil else {return}
+            
             //Convert to JSON
             do {
                 let agents = try
@@ -43,35 +40,30 @@ class ViewModel: ObservableObject{
                 DispatchQueue.main.async {
                     self?.agents = agents
                 }
-            }
-            catch {
-                print(error)
-            }
-         
+                print(agents)
+            } catch {print(error)}
         }
-         
-    
-        print(task)
         task.resume()
-        
-        
     }
 }
 
 
 
-
+// This is the list that will be shown in the iPhones screen
 struct ContentView: View {
 @StateObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             List{
-                HStack{
-                    Text("Hey: "+String(viewModel.agents.status))
-                        .bold()
+                ForEach (viewModel.agents.data, id:\.self) { object in
+                    VStack{
+                        Text(object.displayName)
+                            .bold()
+                        Text(object.description)
+                    }
                 }
-                
+               
             }
             .navigationTitle("Agents")
             .onAppear{
@@ -81,6 +73,8 @@ struct ContentView: View {
     }
 }
 
+
+// Preview.
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
