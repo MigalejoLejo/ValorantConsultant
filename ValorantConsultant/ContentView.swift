@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-// This is the list that will be shown in the iPhones screen
+// This is the main view
 struct ContentView: View {
     
     var body: some View {
@@ -16,32 +16,26 @@ struct ContentView: View {
             VStack{
                
                 List{
+                    
+                    // Agents
                     NavigationLink(destination: AgentsListView()) {
                         Image(systemName: "person")
                         Text("Agents")
                         Image("img1").frame(width: 200,height: 50, alignment: .trailing)
                     }
 
-                    
+                    // Maps
                     NavigationLink(destination: Text("Agents")) {
                         Image(systemName: "map")
                         Text("Maps")
                     }.padding(.vertical, 20)
-                    
-                    
-                    
+
                 }.navigationTitle("Sections")
-                
-               
-                
-                
+                    
             }
         }
-        
     }
 }
-
-
 
     
 // Preview.
