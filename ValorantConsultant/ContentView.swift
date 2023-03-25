@@ -8,77 +8,36 @@
 import SwiftUI
 
 
-// Data Models to store requested information.
-struct Object: Codable, Hashable{
-    let uuid:String
-    let displayName:String
-    let description:String
-}
-struct Agent: Codable, Hashable{
-    let status: Int
-    let data:[Object]
-}
-
-
-
-// ViewModel-Class with Function that request information from the API
-class ViewModel: ObservableObject{
-    @Published var agents: Agent = Agent(status:1, data: [Object(uuid:"",displayName: "",description: "")])
-
-    
-    func getAgents(){
-        guard let url = URL(string: "https://valorant-api.com/v1/agents") else {return}
-        
-        let task = URLSession.shared.dataTask(with: url) { [weak self]
-            data, _, error in
-            guard let data = data, error == nil else {return}
-            
-            //Convert to JSON
-            do {
-                let agents = try
-                JSONDecoder().decode(Agent.self, from: data)
-                DispatchQueue.main.async {
-                    self?.agents = agents
-                }
-                print(agents)
-            } catch {print(error)}
-        }
-        task.resume()
-    }
-}
-
-
-
-// This is the list that will be shown in the iPhones screen
+// This is the main view
 struct ContentView: View {
-@StateObject var viewModel = ViewModel()
     
     var body: some View {
-        NavigationView {
-            List{
-                ForEach (viewModel.agents.data, id:\.self) { object in
-                    VStack{
-                        Text(object.displayName)
-                            .bold()
-                        Text(object.uuid)
-                            .monospacedDigit()
-                            .underline()
-                            .font(.custom("ID", size: 15))
-
-                        Text(object.description)
-                    }
-                }
+        NavigationView{
+            VStack{
                
-            }
-            .navigationTitle("Agents")
-            .onAppear{
-                viewModel.getAgents()
+                List{
+                    
+                    // Agents
+                    NavigationLink(destination: AgentsListView()) {
+                        Image(systemName: "person")
+                        Text("Agents")
+                        Image("img1").frame(width: 200,height: 50, alignment: .trailing)
+                    }
+
+                    // Maps
+                    NavigationLink(destination: Text("Agents")) {
+                        Image(systemName: "map")
+                        Text("Maps")
+                    }.padding(.vertical, 20)
+
+                }.navigationTitle("Sections")
+                    
             }
         }
     }
 }
 
-
+    
 // Preview.
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
