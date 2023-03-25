@@ -14,10 +14,14 @@
 		4901BB2A29C1231600A2C825 /* ValorantConsultantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB2929C1231600A2C825 /* ValorantConsultantTests.swift */; };
 		4901BB3429C1231600A2C825 /* ValorantConsultantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB3329C1231600A2C825 /* ValorantConsultantUITests.swift */; };
 		4901BB3629C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB3529C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift */; };
-		4901BB4329C1232E00A2C825 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901BB4229C1232E00A2C825 /* Data.swift */; };
 		4977E1AD29C262C800A12C01 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1AC29C262C800A12C01 /* ViewModel.swift */; };
 		4977E1B929C3BB6800A12C01 /* AgentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1B829C3BB6800A12C01 /* AgentsListView.swift */; };
 		4977E1BD29C3D30A00A12C01 /* SingleAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1BC29C3D30A00A12C01 /* SingleAgentView.swift */; };
+		4977E1CC29C62E5400A12C01 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1C829C62B5C00A12C01 /* Data.swift */; };
+		4977E1CD29C62E5C00A12C01 /* PlayerInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E1C929C62B6C00A12C01 /* PlayerInformation.swift */; };
+		4996D26229C8C12C00976000 /* AllPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996D26129C8C12C00976000 /* AllPlayersView.swift */; };
+		4996D26629C8C24500976000 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4996D26529C8C24500976000 /* PlayerViewModel.swift */; };
+		49B86C2629C62FE000E3BBCB /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B86C2529C62FE000E3BBCB /* SinglePlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +52,14 @@
 		4901BB2F29C1231600A2C825 /* ValorantConsultantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValorantConsultantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4901BB3329C1231600A2C825 /* ValorantConsultantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantConsultantUITests.swift; sourceTree = "<group>"; };
 		4901BB3529C1231600A2C825 /* ValorantConsultantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantConsultantUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4901BB4229C1232E00A2C825 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../../../Data.swift; sourceTree = "<group>"; };
 		4977E1AC29C262C800A12C01 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4977E1B829C3BB6800A12C01 /* AgentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsListView.swift; sourceTree = "<group>"; };
 		4977E1BC29C3D30A00A12C01 /* SingleAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAgentView.swift; sourceTree = "<group>"; };
+		4977E1C829C62B5C00A12C01 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		4977E1C929C62B6C00A12C01 /* PlayerInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInformation.swift; sourceTree = "<group>"; };
+		4996D26129C8C12C00976000 /* AllPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlayersView.swift; sourceTree = "<group>"; };
+		4996D26529C8C24500976000 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		49B86C2529C62FE000E3BBCB /* SinglePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,11 @@
 				4977E1B829C3BB6800A12C01 /* AgentsListView.swift */,
 				4977E1BC29C3D30A00A12C01 /* SingleAgentView.swift */,
 				4977E1AC29C262C800A12C01 /* ViewModel.swift */,
-				4901BB4229C1232E00A2C825 /* Data.swift */,
+				4977E1C829C62B5C00A12C01 /* Data.swift */,
+				4996D26529C8C24500976000 /* PlayerViewModel.swift */,
+				4977E1C929C62B6C00A12C01 /* PlayerInformation.swift */,
+				49B86C2529C62FE000E3BBCB /* SinglePlayerView.swift */,
+				4996D26129C8C12C00976000 /* AllPlayersView.swift */,
 				4901BB1C29C1231600A2C825 /* Assets.xcassets */,
 				4901BB1E29C1231600A2C825 /* Preview Content */,
 			);
@@ -270,11 +282,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4901BB1B29C1231400A2C825 /* ContentView.swift in Sources */,
-				4901BB4329C1232E00A2C825 /* Data.swift in Sources */,
 				4977E1B929C3BB6800A12C01 /* AgentsListView.swift in Sources */,
+				4996D26629C8C24500976000 /* PlayerViewModel.swift in Sources */,
 				4977E1BD29C3D30A00A12C01 /* SingleAgentView.swift in Sources */,
 				4977E1AD29C262C800A12C01 /* ViewModel.swift in Sources */,
+				49B86C2629C62FE000E3BBCB /* SinglePlayerView.swift in Sources */,
+				4996D26229C8C12C00976000 /* AllPlayersView.swift in Sources */,
+				4977E1CD29C62E5C00A12C01 /* PlayerInformation.swift in Sources */,
 				4901BB1929C1231400A2C825 /* ValorantConsultantApp.swift in Sources */,
+				4977E1CC29C62E5400A12C01 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ValorantConsultant/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DV3NSQV64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ValorantConsultant/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DV3NSQV64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -20,7 +20,7 @@ class ViewModel: ObservableObject{
             data, _, error in
             guard let data = data, error == nil else {return}
             
-            //Convert to JSON
+            //Convert from JSON
             do {
                 let agents = try
                 JSONDecoder().decode(Agent.self, from: data)

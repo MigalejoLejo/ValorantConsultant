@@ -18,14 +18,14 @@ struct ContentView: View {
                 List{
                     
                     // Agents
-                    NavigationLink(destination: AgentsListView()) {
+                    NavigationLink(destination: AllPlayersView()) {
                         Image(systemName: "person")
                         Text("Agents")
                         Image("img1").frame(width: 200,height: 50, alignment: .trailing)
                     }
 
                     // Maps
-                    NavigationLink(destination: Text("Agents")) {
+                    NavigationLink(destination: Text("I Love Vlasta")) {
                         Image(systemName: "map")
                         Text("Maps")
                     }.padding(.vertical, 20)
